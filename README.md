@@ -28,8 +28,7 @@ Welcome to the **Python Scripting Certification** repository! 🎓 This reposito
 
 ---
 
-### 4. NumPy & Pandas  <a href="https://numpy.org/" target="_blank" rel="noreferrer"><img src="https://github.com/gilbarbara/logos/blob/main/logos/numpy.svg" alt="numpy" width="40" height="40" /></a>
-<a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"><img src="https://github.com/devicons/devicon/blob/master/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40" /></a>
+### 4. NumPy & Pandas  <a href="https://numpy.org/" target="_blank" rel="noreferrer"><img src="https://github.com/gilbarbara/logos/blob/main/logos/numpy.svg" alt="numpy" width="40" height="40" /></a><a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"><img src="https://github.com/devicons/devicon/blob/master/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40" /></a>
 - Introduction to **NumPy** and **Pandas** libraries for data manipulation.  
 - Learn basic statistics, probability distributions, and various data operations supported by these libraries.  
 
