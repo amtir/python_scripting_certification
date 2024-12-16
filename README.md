@@ -1,5 +1,4 @@
-# Python Scripting Certification <a href="https://www.python.org" target="_blank" rel="noreferrer">
-        <img src="https://github.com/gilbarbara/logos/blob/main/logos/python.svg" alt="python" width="40" height="40" /></a>
+# Python Scripting Certification <a href="https://www.python.org" target="_blank" rel="noreferrer"><img src="https://github.com/gilbarbara/logos/blob/main/logos/python.svg" alt="python" width="40" height="40" /></a>
 
 Welcome to the **Python Scripting Certification** repository! 🎓 This repository provides an overview of the key modules, topics, and a final certification project to master Python scripting concepts and apply them to real-world scenarios.
 
