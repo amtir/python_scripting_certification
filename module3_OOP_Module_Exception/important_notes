@@ -1,0 +1,277 @@
+
+Date: 18-07-2024
+ 
+concept & theory 
+
+Filter, Map, Reduce usin Lambda
+
+
+
+Scope Variables 
+
+Local & Global
+
+
+id ()   --> memory address 
+
+
+keywords arguments  
+add(d=10, b=2, a=1, c=5)  order does not mater
+
+Default arguments
+d=3 in the function definition
+add(b=2, a=1, c=5)
+
+
+
+Variable-Length Arguments
+*users    n number of values 
+
+**users   **kwargs     ( pass a dictionary, collected in function using **kwargs)
+
+myFunction(1,2,3,4,5,6, name='Mandar', country='EU', age=35)
+
+def myFunction(arg1, arg2, *args, **kwargs):
+	.... 
+	
+
+--> polymorphism   call function in multiple ways 
+
+
+POP Procedure Oriented vs OOP Object Oriented Programming
+
+class myClass
+
+self.pub	Public
+self._pro	Protected
+self.__pri 	Private
+
+def __privMethod(self):
+	print("I am private method")
+
+
+Still can access the private attributes and methods
+obj = myClass()
+
+obj._myClass.__pri
+obj._myClass.__priMethod()
+
+
+
+
+Constructor 
+
+def __init__(self):
+
+
+Destructor
+def __del__(self):
+
+
+
+del obj   --> calls the destructor 
+
+
+Date 20-07-2024
+----------------
+Multiple constructors 
+same class with different constructors 
+--> decorator  @classmethod
+
+class Date: 
+   def __init__(self, year, month, day):
+      self.year = year
+      self.month = month
+      self.day = day
+      
+   @classmethod
+   def dmy(cls, day, month, year):
+      cls.year = year
+      cls.month = month
+      cls.day = day 
+      return cls(cls.year, cls.month, cls.day)
+      
+      
+obj = Date.dmy(9, 10, 2024)
+print(obj.year)
+
+
+
+OOP: 
+Abstraction, Encapsulation, Inheritance, Overriding, Polymorphism
+
+Abstraction:
+
+Encapsulation: combining the code into a public interface, and private implementation of that interface 
+--> Mechanism for restricting the access to some of an objects components 
+
+Inheritance: deriving a class from a base class  with little or no modification
+Single Inheritance, Multiple , Multilevel Inheritance 
+
+--> Code reuse, reduction of complexity 
+
+class parentClassName(baseClass):
+	def __init__(self);
+		super(parentClassName, self).__init__()
+		print("In parent constructor")	
+
+
+super() works in conjunction with the method resolution order (MRO), which determines the order in which base classes are searched when executing a method.
+
+print(DerivedClass.__mro__)
+
+
+
+class DerivedClass(BaseClass1, BaseClass2):
+    def __init__(self):
+        BaseClass1.__init__(self)  # Directly calling BaseClass1's constructor
+        BaseClass2.__init__(self)  # Directly calling BaseClass2's constructor
+        print("In DerivedClass constructor")
+
+
+Overriding
+
+Polymorphism : the ability to levrage the same interface for different underlying forms such as data types or classes.
+Person  (Student or Millionare) pay_bill()
+--> different forms of an object
+commonly named methods across classes or subclasses
+
+
+Standard libraries
+------------------
+Build-in fuctions
+Modules (Sys, Os, Math, DateTime, Random, Json)
+Packages 
+
+
+import math
+dir(math)
+
+Reload: the reload function imports a previously imported module again
+reload module_name
+reload math
+
+
+Modules: 
+Sys --> access to some variables anf functions used and maintained by the interpreter that interact strongly with the interpreter.
+
+sys.argv    --> stores any command line argument, includingthe program name
+sys.exit()  --> tells the python interpreter to quit
+
+sys.flags 
+<pre>sys.flags
+sys.flags(debug=0, inspect=0, interactive=0, optimize=0, dont_write_bytecode=0, no_user_site=0, no_site=0, ignore_environment=0, verbose=0, bytes_warning=0, quiet=0, hash_randomization=1, isolated=0, dev_mode=False, utf8_mode=0, int_max_str_digits=-1</pre>
+
+sys.prefix
+>>> sys.prefix
+'/usr'
+
+
+sys.flags: Provides information about the status of command-line flags passed to the Python interpreter.
+sys.prefix: Specifies the installation directory of the Python interpreter, useful for locating the standard library and other supporting files.
+
+Os module Operating system 
+--> create/delete  directory
+>>> os.name
+'posix'
+>>> 
+>>> os.environ
+environ({'SHELL': '/bin/bash', ...
+>>> os.getlogin()
+'john'
+>>> 
+>>> os.getppid()
+8597
+>>> os.getcwd
+<built-in function getcwd>
+>>> os.getcwd()
+'/home/john'
+
+os.path.join(,)
+os.path.abspath()
+os.path.normpath()
+os.split(path)
+os.path.exists('/home/john/')
+os.path.isdir('/home/john/')
+os.walk('/home/john/') --> generator 
+
+import math
+math.ceil, math.copysign(,), math.fabs(), math.exp(5), math.expm1(2), log(10,10), acos, asin, atan, cos, degrees, math.radians, math.pi, math.e
+
+import random This module implements pseudo-random number generators for various distributions. 
+random.randrange(100)
+random.randrange(0,100,20)
+random.randint(0,30)
+random.getstate
+random.uniform(6,2)
+
+datetime, json 
+
+Regular Expression Operations 
+
+import re 
+re.sub( , , )
+re.search(,)
+re.match(,)
+
+
+Packages
+---------
+A package is a collection of Python modules. Python packages allow you to breack down large systems and organize their modules in a consistent way that you and other people can use and reuse efficiently.
+
+Package
+A package is a collection of modules organized in a directory hierarchy. It allows you to group related modules together, making it easier to organize and manage large codebases. A package typically contains an __init__.py file, which can be empty or contain initialization code for the package.
+
+Example of a package: Consider the following directory structure:
+
+mypackage/
+    __init__.py
+    module1.py
+    module2.py
+
+__init__.py: This file can be empty or include initialization code. It is required to make Python treat the directory as a package.
+
+module1.py: A module within the package.
+
+module2.py: Another module within the package.
+
+You can import and use modules from the package:
+from mypackage import module1, module2
+
+result1 = module1.some_function()
+result2 = module2.another_function()
+
+
+Exception Handling
+--------------------
+try:
+f = open("test.txt", "w")
+   raise CustomError
+except ExceptionI:
+
+exception ExceptionII:
+
+except (TypeError, ZeroDivisionError);
+
+except: 
+
+finally: 
+
+
+finally block this clause is executed no matter what, and is generally used to release external resources.
+
+
+class CustomError(Exception);
+   pass
+
+
+raise CustomError
+
+
+
+
+
+
+
+
+

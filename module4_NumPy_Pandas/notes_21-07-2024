@@ -1,0 +1,125 @@
+
+
+NumPy & Pandas & matplotlib
+
+Objectives
+-------------
+Creater arrays using NumPy
+NumPy to perform mathematical operations on arrays
+Read and write data from text/csv files into arrays and vice-versa
+Understand Pandas and employ it for data manipulation
+Understand and use the data structures available in Pandas
+Read and write data between files and programs
+
+What is Data Analysis? 
+-----------------------
+Data Analysis is a process of inspecting, cleaning, transforming, and modeling data with the goal of discovering useful information, suggesting conclusions, and supporting decision-making.
+
+Prepare a Model
+Analyses Trends and make decision
+
+Date Analysis, Manipulation, Visualization (NumPy, Pandas, mathplotlib)
+
+
+NumPy
+------
+NumPy is a package for scientific computing 
+--> Multi dimensional array (matrix)
+--> Methods for precessing arrays
+--> Elements by element operations
+--> Mathematical operations like linear algebra
+
+Operations: Mathematical and logical, Fourier transformation and shape manipulation, Linear algebra and random number generation
+
+Why NumPy?
+Metadata (data about the data, extra information)
+
+The ndarray is a multi-dimensional array object consisting of two parts. Tha actual data, some metadata which describes the storage data. They are indexed just like sequences are in Python, starting from 0.
+
+
+Each element in ndarray is an object of data-type object (called dtype)
+An item extracted from ndarray, is represented by a Python object of an array scalar type 
+
+
+[john@squid ~]$ sudo pip install numpy
+Collecting numpy
+  Downloading numpy-2.0.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (19.3 MB)
+     |████████████████████████████████| 19.3 MB 248 kB/s            
+Installing collected packages: numpy
+
+
+Reading and writing from text files loadtxt/savetxt
+-------------------------------------
+arr = np.loadtxt('file.txt')
+np.savetxt('newfile.txt', arr)
+
+reading and writing from CSV files
+savetxt / genfromtxt
+new_arr = np.savetxt('test.csv', arr, delimiter=',')
+arr = genfromtxt('my_file.csv', delimiter=',')
+
+
+##############################
+
+Pandas 
+--------
+Pandas is an open-source Python library providing efficient, easy-to-use data structures and data analysis tools. Than name Pandas is derived from "Panel Data", an Econometrics from Multidimensional data. 
+
+Pandas is well suited for many different kinds of data: 
+Tabular data with heterogenously-typed columns
+Ordered and unordered time series data
+Arbitrary matrix data with row and column labels
+Any other from of observational / statistical data sets. The data actually need not be labeled at all to be placed into a pandas data structure.
+
+[root@squid module4]#  pip install pandas
+Collecting pandas
+  Downloading pandas-2.2.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.1 MB)
+...
+
+Data Structures in Pandas 
+--------------------------
+Pandas provides 3 three data strutures. (All are build on top of NumPy array)
+Data Structure | Dimensions | Description
+1 - Series, 1 , Labeled homogenous array of immutable size
+2 - DataFrames, 2, Labeled, heterogeneously typed, size-mutable tabular data structures
+3 - Panels, 3, Labeled size-mutable array
+
+(*) All the above data structures are value-mutable
+
+
+1 - Series single-dimentional array stores homogenous data
+    Value-mutable and size-immutable
+
+
+2 - DateFrame
+A DataFrame is a 2D data structure in which data is aligned in a tabular fashion consisting of rows & columns
+pandas.DataFrame(data, index, dtype, copy) 
+
+
+Date: of multiple type ndarray, lists, constant, series, dict 
+index --> default range(
+dtype --> Date type of each column
+copy --> shallow/deep-copy? true false? 
+
+
+
+
+
+
+
+Loading CSV data into DataFrame 
+--------------------------------
+table = pandas.read_csv("/home/john/Datasets/USArrest.csv")
+
+
+Storing Data in CSV Files
+--------------------------
+Data present in DataFrames can be written to a CSV file using the to_csv() function 
+table.to_csv("/home/john/Datasets/USArrest.csv")
+
+
+Storing Data in Excel Files
+------------------------------
+table.to_excel("/home/john/Datasets/USArrest.xlsx")
+
+
