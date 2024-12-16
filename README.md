@@ -1,4 +1,5 @@
-# Python Scripting Certification
+# Python Scripting Certification <a href="https://www.python.org" target="_blank" rel="noreferrer">
+        <img src="https://github.com/gilbarbara/logos/blob/main/logos/python.svg" alt="python" width="40" height="40" /></a>
 
 Welcome to the **Python Scripting Certification** repository! 🎓 This repository provides an overview of the key modules, topics, and a final certification project to master Python scripting concepts and apply them to real-world scenarios.
 
@@ -28,13 +29,14 @@ Welcome to the **Python Scripting Certification** repository! 🎓 This reposito
 
 ---
 
-### 4. NumPy & Pandas  
+### 4. NumPy & Pandas  <a href="https://numpy.org/" target="_blank" rel="noreferrer"><img src="https://github.com/gilbarbara/logos/blob/main/logos/numpy.svg" alt="numpy" width="40" height="40" /></a>
+<a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"><img src="https://github.com/devicons/devicon/blob/master/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40" /></a>
 - Introduction to **NumPy** and **Pandas** libraries for data manipulation.  
 - Learn basic statistics, probability distributions, and various data operations supported by these libraries.  
 
 ---
 
-### 5. Data Visualization  
+### 5. Data Visualization  <a href="https://matplotlib.org/" target="_blank" rel="noreferrer"><img src="https://github.com/detain/svg-logos/blob/master/svg/m/matplotlib-1.svg" alt="matplotlib" width="40" height="40" /></a>
 - Learn to visualize data using Python.  
 - Overview of **Matplotlib** and techniques for creating meaningful graphs, charts, and plots.  
 
